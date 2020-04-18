@@ -1,0 +1,44 @@
+#include <iostream>
+#include "square.h"
+
+int main() {
+    double x_1, x_2, y_1, y_2, side_1, side_2, angle_1, angle_2;
+    std::cout << std::endl << "Enter x_1, y_1, side_1 and angle_1: " << std::endl;
+    std::cout << "x_1 =";
+    std::cin >> x_1;
+    std::cout << "y_1 =";
+    std::cin >> y_1;
+    std::cout << "side_1 =";
+    std::cin >> side_1;
+    std::cout << "angle_1 =";
+    std::cin >> angle_1;
+
+    std::cout << std::endl << "Enter x_2, y_2, side_2 and angle_2: " << std::endl;
+    std::cout << "x_2 =";
+    std::cin >> x_2;
+    std::cout << "y_2 =";
+    std::cin >> y_2;
+    std::cout << "side_2 =";
+    std::cin >> side_2;
+    std::cout << "angle_2 =";
+    std::cin >> angle_2;
+
+    Square square_1(x_1, y_1, side_1, angle_1);
+    Square square_2(x_2, y_2, side_2, angle_2);
+
+    std::cout << std::endl << "C o m p a r i s o n: " << std::endl;
+    if (square_1 < square_2) {
+        std::cout << "square_1 < square_2" << std::endl;
+    } else if (square_1 > square_2) {
+        std::cout << "square_1 > square_2" << std::endl;
+    } else if (square_1 == square_2) {
+        std::cout << "square_1 = square_2" << std::endl;
+    }
+
+    std::cout << std::endl << "Multiplication of side_1: ";
+    std::cout << std::endl << "Enter a real number: ";
+    double num;
+    square_1 *= 5;
+    std::cout << square_1 << std::endl;
+
+}
